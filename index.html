@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gangsta Juice — Bold Cold Brew & Elixirs</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/logo.svg">
+  <meta name="description" content="Gangsta Juice — handcrafted cold brews, elixirs, and merch.">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-grid">
+      <div class="brand">
+        <img src="assets/logo.svg" alt="Gangsta Juice logo" class="logo">
+        <div class="brand-text">
+          <h1>Gangsta Juice</h1>
+          <p class="tag">Bold. Smooth. Unapologetic.</p>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <a href="#products">Shop</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <button id="cartBtn" class="cart-btn">Cart (<span id="cartCount">0</span>)</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <h2>Wake up like you mean it.</h2>
+        <p>Small-batch cold brews, potent elixirs, and street-smart merch — delivered with attitude.</p>
+        <a class="cta" href="#products">Shop Now</a>
+      </div>
+    </section>
+
+    <section id="products" class="container products-section">
+      <h3>Featured</h3>
+      <div class="products-grid" id="productsGrid">
+        <!-- product cards injected by script -->
+      </div>
+    </section>
+
+    <section id="about" class="container about-section">
+      <h3>About Gangsta Juice</h3>
+      <p>We craft concentrated cold brews and botanical elixirs for people who don't do mild. Clean ingredients, fierce flavor, zero apologies.</p>
+    </section>
+
+    <section id="contact" class="container contact-section">
+      <h3>Contact</h3>
+      <form id="contactForm">
+        <label for="name">Name</label>
+        <input id="name" name="name" required>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        <button type="submit" class="btn">Send</button>
+        <p id="contactStatus" class="muted"></p>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© Gangsta Juice — handcrafted with edge.</p>
+      <p class="muted">This is a demo static site. Replace content & connect a payment provider to accept orders.</p>
+    </div>
+  </footer>
+
+  <!-- Cart modal -->
+  <div id="cartModal" class="cart-modal" aria-hidden="true">
+    <div class="cart-panel">
+      <button class="close" id="closeCart">✕</button>
+      <h4>Your Cart</h4>
+      <div id="cartItems"></div>
+      <div class="cart-actions">
+        <div class="cart-total">Total: $<span id="cartTotal">0.00</span></div>
+        <button id="checkoutBtn" class="btn">Checkout (demo)</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
